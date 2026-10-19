@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F6F9">
+
+    <!-- TOP BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#1565C0"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txtTrackingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Track My Order"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- PRODUCT NAME -->
+            <TextView
+                android:id="@+id/txtProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#222222" />
+
+            <!-- STATUS CARD -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Status"
+                        android:textSize="14sp"
+                        android:textColor="#777777"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:id="@+id/txtOrderStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status: Loading..."
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#1565C0"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:id="@+id/txtEstimatedTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textColor="#444444"
+                        android:layout_marginTop="8dp" />
+
+                    <!-- DELIVERY INFO (New) -->
+                    <TextView
+                        android:id="@+id/txtDeliveryInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Method: Loading..."
+                        android:textSize="15sp"
+                        android:textStyle="italic"
+                        android:textColor="#388E3C"
+                        android:layout_marginTop="12dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- PROGRESS CARD -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Journey"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#222222" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EEEEEE"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <TextView
+                        android:id="@+id/stepConfirmed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="⬜ Order Confirmed"
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textColor="#999999" />
+
+                    <TextView
+                        android:id="@+id/stepProcessing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="⬜ Processing"
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textColor="#999999" />
+
+                    <TextView
+                        android:id="@+id/stepPrinting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="⬜ Printing"
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textColor="#999999" />
+
+                    <TextView
+                        android:id="@+id/stepReady"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="⬜ Ready for Pickup"
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textColor="#999999" />
+
+                    <TextView
+                        android:id="@+id/stepDelivered"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="⬜ Delivered"
+                        android:textSize="16sp"
+                        android:padding="8dp"
+                        android:textColor="#999999" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- CANCEL BUTTON -->
+            <Button
+                android:id="@+id/btnCancelOrder"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="30dp"
+                android:text="Cancel Order"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:backgroundTint="#E53935"
+                android:textColor="#FFFFFF"
+                android:visibility="gone"
+                app:cornerRadius="12dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

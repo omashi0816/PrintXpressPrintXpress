@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Secure Payment"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- ORDER SUMMARY -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Order Summary"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#222222"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/summaryProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Product: Business Cards"
+                    android:textSize="15sp"
+                    android:textColor="#444444"/>
+
+                <TextView
+                    android:id="@+id/summaryQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity: 100"
+                    android:textSize="15sp"
+                    android:textColor="#444444"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/summaryDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery: Home Delivery"
+                    android:textSize="15sp"
+                    android:textColor="#388E3C"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/summaryTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount: Rs. 500"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#D32F2F"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:text="Select Payment Method"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- PAYMENT METHODS -->
+        <RadioGroup
+            android:id="@+id/paymentGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <RadioButton
+                android:id="@+id/rCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card"
+                android:layout_marginEnd="15dp"/>
+
+            <RadioButton
+                android:id="@+id/rBank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank"
+                android:layout_marginEnd="15dp"/>
+
+            <RadioButton
+                android:id="@+id/rCOD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COD"/>
+        </RadioGroup>
+
+        <!-- CARD DETAILS -->
+        <LinearLayout
+            android:id="@+id/cardDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="15dp">
+
+            <EditText android:id="@+id/cardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Card Number"
+                android:inputType="number"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"/>
+
+            <EditText android:id="@+id/cardName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cardholder Name"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:weightSum="2">
+                <EditText android:id="@+id/expDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="MM/YY"
+                    android:layout_marginEnd="5dp"
+                    android:padding="12dp"
+                    android:background="@android:drawable/edit_text"/>
+                <EditText android:id="@+id/cvv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="CVV"
+                    android:inputType="numberPassword"
+                    android:layout_marginStart="5dp"
+                    android:padding="12dp"
+                    android:background="@android:drawable/edit_text"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- BANK DETAILS -->
+        <LinearLayout
+            android:id="@+id/bankDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="#E8F5E9"
+            android:layout_marginTop="15dp"
+            android:visibility="gone">
+            <TextView
+                android:text="Bank: Sampath Bank\nAcc Name: PrintXpress PVT LTD\nAcc No: 1234 5678 9012"
+                android:textColor="#2E7D32"
+                android:lineSpacingExtra="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- COD INFO -->
+        <LinearLayout
+            android:id="@+id/codLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="#FFF3E0"
+            android:layout_marginTop="15dp"
+            android:visibility="gone">
+            <TextView
+                android:text="Pay Rs. 500 when you receive your order."
+                android:textColor="#E65100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/payBtn"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="30dp"
+            android:text="CONFIRM &amp; PAY"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:backgroundTint="#2E7D32"
+            android:textColor="#FFF"
+            app:cornerRadius="12dp"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F6F9">
+
+    <!-- TOP BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#7B1FA2"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Design Album"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Saved Artwork"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#333333" />
+
+            <GridLayout
+                android:id="@+id/albumGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginTop="20dp">
+
+                <!-- ADD NEW DESIGN CARD -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardAddDesign"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="#F1F8E9">
+                    <LinearLayout android:orientation="vertical" android:padding="12dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/upload" android:scaleType="centerInside" android:contentDescription="Upload Icon"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add New" android:textColor="#2E7D32" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Designs will be added here dynamically from Activity -->
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/txtNoDesigns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No designs saved yet."
+                android:textSize="14sp"
+                android:textColor="#777777"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

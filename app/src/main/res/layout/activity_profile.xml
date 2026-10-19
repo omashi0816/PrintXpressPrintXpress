@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- TOP BANNER -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/logonew"
+            android:scaleType="centerCrop"
+            android:background="#DDDDDD"
+            android:contentDescription="Profile Banner"/>
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:layout_marginTop="20dp"/>
+
+        <!-- PROFILE CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgProfilePic"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/propic"
+                    android:scaleType="centerCrop"
+                    android:background="#E3F2FD"
+                    android:padding="2dp"
+                    android:contentDescription="Profile Picture"/>
+
+                <TextView
+                    android:id="@+id/txtUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Name"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#222222"
+                    android:layout_marginTop="18dp"/>
+
+                <TextView
+                    android:id="@+id/txtUserEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="user@email.com"
+                    android:textSize="16sp"
+                    android:textColor="#777777"
+                    android:layout_marginTop="6dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- QUICK LINKS SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnProfileNotifications"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="Notifications"
+                android:textAllCaps="false"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#1565C0"
+                app:strokeColor="#1565C0"
+                app:strokeWidth="1dp"
+                app:icon="@android:drawable/ic_popup_reminder"
+                app:iconTint="#1565C0"/>
+
+            <Button
+                android:id="@+id/btnProfileHelp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="Help &amp; Support"
+                android:textAllCaps="false"
+                android:layout_marginStart="5dp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#1565C0"
+                app:strokeColor="#1565C0"
+                app:strokeWidth="1dp"
+                app:icon="@android:drawable/ic_menu_help"
+                app:iconTint="#1565C0"/>
+        </LinearLayout>
+
+        <!-- PAYMENT INFO CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
+            <LinearLayout android:orientation="vertical" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="Payment Information" android:textSize="20sp" android:textStyle="bold" android:textColor="#222222" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/txtPaymentInfo" android:text="No saved payment methods" android:textSize="16sp" android:textColor="#444444" android:layout_marginTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ORDER HISTORY CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
+            <LinearLayout android:orientation="vertical" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="Order History" android:textSize="22sp" android:textStyle="bold" android:textColor="#222222" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/txtOrderHistory" android:text="No Orders Yet" android:textSize="16sp" android:textColor="#444444" android:layout_marginTop="15dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="30dp"
+            android:text="Edit Profile"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#1565C0"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="14dp"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#E53935"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+</ScrollView>

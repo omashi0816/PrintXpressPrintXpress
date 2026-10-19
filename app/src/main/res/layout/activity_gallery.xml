@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F6FA">
+
+    <!-- TOP BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#1565C0"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Design Gallery"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Premium Designs"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#222222" />
+
+            <!-- SEARCH BAR -->
+            <EditText
+                android:id="@+id/edtSearchGallery"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Search designs (e.g. Card, Mug...)"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawablePadding="10dp"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:importantForAutofill="no" />
+
+            <GridLayout
+                android:id="@+id/galleryGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginTop="20dp">
+
+                <!-- UPLOAD YOUR OWN DESIGN CARD -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardUploadOwn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="#E8F5E9">
+                    <LinearLayout android:orientation="vertical" android:padding="12dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="100dp" android:src="@drawable/upload" android:scaleType="centerInside" android:contentDescription="Upload Custom Design"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Upload Own" android:textColor="#2E7D32" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- BUSINESS CARDS -->
+                <androidx.cardview.widget.CardView android:id="@+id/card1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/bussinescard1" android:scaleType="centerCrop" android:contentDescription="Card 1"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Card Design 1" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView android:id="@+id/card6" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/bussinescard2" android:scaleType="centerCrop" android:contentDescription="Card 2"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Card Design 2" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView android:id="@+id/card11" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/bussinescard3" android:scaleType="centerCrop" android:contentDescription="Card 3"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Card Design 3" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- FLYERS -->
+                <androidx.cardview.widget.CardView android:id="@+id/card2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/flyer1" android:scaleType="centerCrop" android:contentDescription="Flyer 1"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Flyer Design 1" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView android:id="@+id/card7" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/flyer2" android:scaleType="centerCrop" android:contentDescription="Flyer 2"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Flyer Design 2" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView android:id="@+id/card12" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/flyer3" android:scaleType="centerCrop" android:contentDescription="Flyer 3"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Flyer Design 3" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- POSTERS -->
+                <androidx.cardview.widget.CardView android:id="@+id/card3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/ps1" android:scaleType="centerCrop" android:contentDescription="Poster 1"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Poster Design 1" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView android:id="@+id/card8" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/ps2" android:scaleType="centerCrop" android:contentDescription="Poster 2"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Poster Design 2" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView android:id="@+id/card13" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/ps3" android:scaleType="centerCrop" android:contentDescription="Poster 3"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Poster Design 3" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- T-SHIRTS -->
+                <androidx.cardview.widget.CardView android:id="@+id/card4" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/tshirt1" android:scaleType="centerCrop" android:contentDescription="T-Shirt 1"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="T-Shirt Design 1" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView android:id="@+id/card9" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/tshirt2" android:scaleType="centerCrop" android:contentDescription="T-Shirt 2"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="T-Shirt Design 2" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView android:id="@+id/card14" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/tshirt3" android:scaleType="centerCrop" android:contentDescription="T-Shirt 3"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="T-Shirt Design 3" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- MUGS -->
+                <androidx.cardview.widget.CardView android:id="@+id/card5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/mg1" android:scaleType="centerCrop" android:contentDescription="Mug 1"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mug Design 1" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView android:id="@+id/card10" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/mg2" android:scaleType="centerCrop" android:contentDescription="Mug 2"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mug Design 2" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView android:id="@+id/card15" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="8dp" app:cardCornerRadius="12dp" app:cardElevation="3dp">
+                    <LinearLayout android:orientation="vertical" android:padding="8dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="match_parent" android:layout_height="120dp" android:src="@drawable/mg3" android:scaleType="centerCrop" android:contentDescription="Mug 3"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mug Design 3" android:textStyle="bold" android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

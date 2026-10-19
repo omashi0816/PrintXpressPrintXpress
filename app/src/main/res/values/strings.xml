@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">PrintXpress</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register_prompt">Don\'t have an account? Register</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">Full Name</string>
+    <string name="register">Register</string>
+    <string name="our_services">Our Services</string>
+    <string name="business_cards">Business Cards</string>
+    <string name="flyers">Flyers</string>
+    <string name="t_shirts">T-Shirts</string>
+    <string name="custom_mugs">Custom Mugs</string>
+    <string name="recent_orders">Recent Orders</string>
+    <string name="no_orders_yet">No orders yet</string>
+    <string name="logo_desc">PrintXpress Logo</string>
+    <string name="logout_desc">Logout</string>
+    <string name="total_price">Total Price: Rs. %1$d</string>
+    <string name="select_design">Select Design from Gallery</string>
+    <string name="notifications">Notifications</string>
+    <string name="welcome_msg">Welcome to PrintXpress!</string>
+    <string name="select_service">Select a service to get started</string>
+</resources>
